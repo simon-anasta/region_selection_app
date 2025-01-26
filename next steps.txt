@@ -1,0 +1,28 @@
+## To do list for making a full app
+
+- UI layout
+  + instructions
+- Map bounds to limit zoom-out
+- Distinct colours (unselected, hover, selected)
+  + customisation of line weights, opacity
+- On hover/popup text with region name
+- More detailed shape file
+  + performance improvements (e.g. simplify)
+- Export functionality
+- Reset functionality
+- Separate shape preparation from app
+  + save preprepared shape file
+- Decide on prefered base tiles
+
+
+Reference:
+rmapshaper::ms_simplify instead of rgeos::gSimplify for simplifying polyons.
+It uses a different algorithm to create smootherborders, and more importantly
+preserves topology (shared boundaries) between adjacent polygons to avoid
+gaps and overlaps between shapes.
+
+## Extensions:
+
+- Separate North & South island maps or separate region maps
+  to further reduce performance demands
+
